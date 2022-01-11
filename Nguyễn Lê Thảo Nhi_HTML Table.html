@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Table</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h3>Complex Table</h3>
+	<table border="1" cellpadding="10px">
+		<tr>
+			<td>1, 1</td>
+			<td>1, 2</td>
+			<td>1, 3</td>
+			<td>1, 4</td>
+		</tr>
+
+		<tr>
+			<td>2, 1</td>
+			<td colspan="2">2, 2 - 3</td>
+			<td>2, 4</td>
+		</tr>
+
+		<tr>
+			<td colspan="4">3, 1 - 4</td>
+		</tr>
+
+		<tr>
+			<td rowspan="2">1, 1</td>
+			<td>1, 2</td>
+			<td>1, 3</td>
+			<td rowspan="2">1, 4</td>
+		</tr>
+
+		<tr>
+			<td>1, 2</td>
+			<td>1, 3</td>
+		</tr>
+	</table>
+	<br>
+	<h3>Complete Table</h3>
+	<table border="1" cellpadding="10px">
+		<colgroup>
+			<col style="width: 50px">
+			<col style="width: 200px">
+			<col style="width: 100px">
+			<col style="width: 150px">
+		</colgroup>
+
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Avatar</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Ung Văn Giàu</td>
+				<td>giau.ung@eiu.edu.vn</td>
+				<td><img src="Teacher1.png" width="100" height="100"></td>
+			</tr>
+
+			<tr>
+				<td>2</td>
+				<td>Ung Văn Sang</td>
+				<td>sang.ung@eiu.edu.vn</td>
+				<td><img src="Teacher2.png" width="100" height="100"></td>
+			</tr>
+		</tbody>
+
+		<tfoot>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Avatar</th>
+			</tr>
+		</tfoot>
+	</table>
+	
+	
+
+</body>
+</html>
