@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Problem 2. Student System</title>
+	<style type="text/css">
+		.header{
+			display: flex;
+		}
+		.column-left{
+			width: 25%; 
+			box-sizing: border-box;
+		}
+		.column-right{
+			width: 75%; 
+			box-sizing: border-box;
+		}
+		.header: after{
+			clear: both;
+			content:"";
+			display: block;
+		}
+		.menu > li > a{
+			text-decoration: none;
+			color: black;
+		}
+		table, th, td{
+			border: 1px solid;
+			text-align: center;
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+<body>
+	<header class="header">
+		<a class="column-left"  href="#" class="logo">
+	        <img src="images/logo.png" alt="Logo">
+	    </a>
+	    <h2 class="column-right">Welcome to Our Web Site</h2>
+        <!-- <span>Welcome to Our Web Site</span> --> 
+    </header>
+    <nav>
+        <ul class="menu">
+            <li>
+                <a href="#">
+                    New item 1
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    New item 1
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    New item 1
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                   New item 1
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <main>
+	    <table>
+	    	<colgroup>
+	    		<col style="width: 100px">
+	    		<col style="width: 100px">
+	    		<col style="width: 100px">
+	    	</colgroup>
+	    	<thead>
+	    		<tr>
+		    		<th>First Name</th>
+		    		<th>Last Name</th>
+		    		<th>Score</th>
+		    	</tr>
+	    	</thead>
+	    	
+	    	<tbody>
+	    		<tr>
+		    		<td>Ivan</td>
+		    		<td>Ivanov</td>
+		    		<td>4.54</td>
+		    	</tr>
+		    	<tr>
+		    		<td>Petar</td>
+		    		<td>Petrov</td>
+		    		<td>4.31</td>
+		    	</tr>
+		    	<tr>
+		    		<td>Kiro</td>
+		    		<td>Kirov</td>
+		    		<td>4.62</td>
+		    	</tr>
+	    	</tbody>
+	    </table>
+    </main>
+</body>
+</html>

@@ -1,0 +1,63 @@
+.main{
+	display: flex;
+}
+.col-left{
+	width: 55%; 
+	box-sizing: border-box;
+	margin-right: 30px;
+	padding: 10px;
+	box-shadow: 0px 1px 1px 1px rgb(200, 200, 200);
+	
+}
+.col-right{
+	width: 45%; 
+	height: 220px;
+	box-sizing: border-box;
+	padding: 10px;
+	box-shadow: 0px 1px 1px 1px rgb(200, 200, 200);
+}
+.main: after{
+	clear: both;
+	content:"";
+	display: block;
+}
+strong {
+	margin: 0 10px 10px 0;
+	padding-left: 15px;
+	font-size: 17px;
+	color: rgb(20, 113, 162);
+	line-height: 1;
+	background: url(https://thethao247.vn/base/after_youtube.png) 0 0 no-repeat;
+	background-size: auto 100%;
+}
+.type-sport{
+	text-decoration: none;
+	color: rgb(165, 166, 173);
+	margin-left: 10PX;
+}
+.publish-time{
+	text-transform: uppercase;
+	color: rgb(195, 198, 203);
+}
+i{
+	color: rgb(189, 190, 193);
+}
+.content-menu > li{
+	padding-top: 15px;
+}
+hr{
+	border: 1px dashed rgb(228, 228, 228);
+}
+.img-user{
+	border-radius: 50%;
+	width: 30px; height: 30px;
+}
+.username{
+	text-decoration: none;
+	color: rgb(100, 214, 247);
+	margin-left: 10PX;
+	font-weight: bold;
+}
+.time{
+	color: rgb(195, 198, 203);
+}

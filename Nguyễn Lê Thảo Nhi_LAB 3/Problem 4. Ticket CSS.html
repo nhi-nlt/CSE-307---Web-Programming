@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Problem 4. Ticket CSS</title>
+	<style type="text/css">
+		table{
+			background-color: rgb(89, 89, 89);
+		}
+		td{
+			color: #fff;
+		}
+		.id{
+			color: rgb(185, 185, 185);
+			font-size: 30px;
+			padding-bottom: 10px;
+		}
+		.round{
+			display: inline-block;
+			border-radius:50%;
+			background-color: rgb(113, 180, 122);
+			width:15px;
+			height: 15px;
+		}
+		.name, .email, .link{
+			color:rgb(244, 236, 177);
+		}
+		.time, .action{
+			color: rgb(185, 185, 185);
+		}
+		.notification{
+			color: rgb(245, 1, 30);
+		}
+		.status{
+			color: rgb(209, 101, 69);
+		}
+	</style>
+</head>
+<body>
+	<table cellpadding="5">
+		<colgroup>
+    		<col style="width: 150px">
+    		<col style="width: 200px">
+    	</colgroup>
+    	<tr>
+    		<td class="id" colspan="2">Ticket ID: 409788</td>
+    	</tr>
+		<tr>
+			<td><i>Name: </i></td>
+			<td>
+				<span class="round"></span>
+				<span class="name">Parker Seidel</span>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="notification"><b>No Active Support</b></td>
+		</tr>
+		<tr>
+			<td><i>Email: </i></td>
+			<td class="email">seidel@aptmail.com</td>
+		</tr>
+		<tr>
+			<td><i>Response Time: </i></td>
+			<td class="time">72hours, 60hours left</td>
+		</tr>
+		<tr>
+			<td><i>Last Action: </i></td>
+			<td class="action">Never been locked</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="link">Link to public post</td>
+		</tr>
+		<tr>
+			<td><i>Status: </i></td>
+			<td class="status"><b>Not answered</b></td>
+		</tr>
+	</table>
+
+</body>
+</html>
