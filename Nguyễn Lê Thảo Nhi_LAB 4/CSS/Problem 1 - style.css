@@ -1,0 +1,12 @@
+p{
+    color:#0094ff;
+    font: consolas;
+}
+@font-face{
+	font-family: EdwarsianScriptITC;
+	src: url('EdwardianScriptITC.ttf');
+}
+.dropcap{
+	font-family: EdwarsianScriptITC;
+	font-size: 3.2em;
+}

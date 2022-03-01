@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Problem 6. Card</title>
+	<style>
+		.left-col, .right-col{
+			display: inline-block;
+		}
+		.hover-card, .normal-card{
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+			transition: 0.3s;
+			width: 50%;
+			border-radius: 5px;
+		}
+		.hover-card:hover {
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		}
+		img {
+			border-radius: 5px 5px 0 0;
+		}
+		.container {
+		 	padding: 2px 16px;
+		}
+	</style>
+</head>
+<body>
+	<div class="left-col">
+		<div class="normal-card">
+			<img src="images/avatar.jpg" alt="Avatar" style="width:100%">
+			<div class="container">
+				<h4><b>Jane Doe</b></h4> 
+				<p>Interior Designer</p> 
+			</div>
+		</div>
+		<h2>Normal</h2>
+	</div>
+
+	<div class="right-col">
+		<div class="hover-card">
+			<img src="images/avatar.jpg" alt="Avatar" style="width:100%">
+			<div class="container">
+				<h4><b>Jane Doe</b></h4> 
+				<p>Interior Designer</p> 
+			</div>
+		</div>
+		<h2>Hover</h2>
+	</div>
+</body>
+</html> 

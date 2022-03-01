@@ -1,0 +1,49 @@
+.main{
+	background-color: rgb(238, 238, 238);
+	width: 450px;
+	height: 600px;
+	border-radius: 2%;
+}
+.main > h2{
+	margin: 5px;
+}
+.container{
+	display: flex;
+	width: 400px;
+	border: 1px solid rgb(187, 187, 187);
+	padding: 10px;
+	margin: 15px;
+	margin-top: 35px;
+	background-color: #fff;
+}
+.col-left{
+	width: 25%; 
+	box-sizing: border-box;
+}
+.col-right{
+	width: 60%; 
+	box-sizing: border-box;
+	margin-left: 45px;
+}
+.col-left{
+	padding-top: 20px;
+}
+.col-left > img{
+	height: 90px;
+	border: 1px solid rgb(187, 187, 187);
+}
+.button{
+	text-align: right;
+}
+.listen-btn{
+	background-image: url('../images/listen.png');
+	width: 90px;
+	height: 30px;
+	color:#fff;
+}
+.add-btn{
+	background-image: url('../images/add.png');
+	width: 75px;
+	height: 30px;
+	color:#fff;
+}
