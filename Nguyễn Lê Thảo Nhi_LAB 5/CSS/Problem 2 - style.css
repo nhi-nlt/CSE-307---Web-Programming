@@ -1,0 +1,72 @@
+a{
+	text-decoration: none;
+	color: black;
+}
+.TopFooter{
+	border-top: 2px solid rgb(101, 45, 146);
+	border-bottom: 2px solid rgb(101, 45, 146);
+	padding-top: 25px;
+	padding-bottom: 25px;
+	margin-left: 80px;
+	margin-right: 100px;
+}
+.TopFooter .media{
+	max-width: 300px;
+}
+.icons{
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	background-color:rgb(101, 45, 146);
+	text-align: center;
+	line-height: 50px; /* cho <i> nằm giữa chiều dọc*/
+}
+.icons i{
+	color:#fff;
+	font-size:35px;
+	padding: 15px;
+}
+.heading{
+	color:rgb(101, 45, 146);
+}
+.MidFooter{
+	background-color: #F8F8F8;
+	margin-top: 30px;
+	padding-bottom: 30px;
+}
+.MidFooter .system, .company, .information, .contact {
+	padding-top: 10px;
+}
+.heading-MidFooter{
+	color: #2C3E50;
+}
+.divider{
+	border: 2px solid rgb(101, 45, 146);
+	width: 50px;
+	margin-left: 0;
+}
+.MidFooter .system-menu, .company-menu, .information-menu{
+	list-style: none;
+	padding: 0;
+}
+.BottomFooter{
+	padding-top: 10px;
+}
+
+.BottomFooter{
+	background-color: #2C3E50;
+	color:#fff;
+	text-align: center;
+}
+@media (max-width: 767.98px){
+	.TopFooter{ 
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.TopFooter .media{ 
+		padding-top: 20px;
+	}
+	.BottomFooter{
+		text-align: left;
+	}
+}

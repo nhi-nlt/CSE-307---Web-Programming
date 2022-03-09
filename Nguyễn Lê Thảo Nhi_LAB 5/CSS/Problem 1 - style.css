@@ -1,0 +1,177 @@
+a{
+	text-decoration: none;
+}
+img{
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+}
+.TopHeader{
+	background-color: #2C3E50;
+	color: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 12px;
+}
+.TopHeader a{
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+.MidHeader > .container > .row{
+	align-items: center;
+}
+.MidHeader .input-group-text{
+	background: none;
+}
+.MidHeader input.form-control{
+	border-right: none;
+}
+.MidHeader .media{
+	max-width: 170px;
+	margin-left: auto;
+	margin-right: 0;
+}
+.shoppingCart{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color:#E83D2B;
+	text-align: center;
+	line-height: 50px; /* cho <i> nằm giữa chiều dọc*/
+}
+.shoppingCart i{
+	color:#fff;
+	font-size:24px;
+}
+.shoppingPrice{
+	color:#E83D2B;
+}
+.BottomHeader{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+li{
+	list-style: none;
+}
+.DesktopMenu{
+	background-color:rgb(101, 45, 146);
+}
+.menu{
+	list-style: none;
+	margin: 0px; 
+	padding: 0px;
+	text-align: center;	
+}
+.menu > li{
+	display: inline-block;
+	padding: 0px; 
+	margin: 0px;
+	margin-left: -4px; /*cho dung bi khoang trang voi nhau*/
+	position: relative;
+}
+.menu > li > a{
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 13px;
+}
+.menu > li:hover  > a{
+	background-color: rgb(121, 57, 169);
+}
+.home{
+	background-color: rgb(121, 57, 169);
+}
+.menu > li > a:link{
+	color: #fff;
+}
+.sub-menu{
+	list-style: none; 
+	display:none;
+	position: absolute;
+	left: 0px; 
+	right: 0px;
+	top: 38.5px;
+	min-width: 200px;
+	margin: 0; padding: 0;
+	background-color: #fff;
+}
+.menu > li:hover .sub-menu{
+	display: block;
+}
+.sub-menu > li{
+	margin: 0;
+	padding: 0;
+	border-bottom: 2px solid #fff;
+}
+.sub-menu > li > a{
+	display: block;
+	padding: 10px 15px;
+	text-decoration: none;
+	text-align: left;
+	color:rgb(101, 45, 146);
+	font-size: 13px;
+	font-weight: bold;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.sub-menu > li:hover  > a{
+	background-color: rgb(101, 45, 146);
+	color: #fff;
+}
+/*.has-children:after{
+	font-family: FontAwesome;
+	content: "\f107";
+	color: #fff;
+	position: absolute;
+	top: 10px; 
+	right: 5px;
+}*/
+/*.MobileMenu{
+	display: none;
+}*/
+/**Mobile section*/
+@media (max-width: 767.98px){
+	.MidHeader{
+		padding-top: 20px;
+		padding-bottom: 20px; 
+	}
+	/*nếu hình nhỏ hơn muốn canh giữa*/
+	.MidHeader img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.MidHeader .SearchForm{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.MidHeader .media{
+		max-width: 250px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	/*.DesktopMenu{
+		display: none;
+	}
+	.MobileMenu{
+		display: block;
+	}*/
+	.MobileMenu{
+		background-color: rgb(101, 45, 146);
+		margin: 0; padding: 5px;
+	}
+	.MobileMenu .buttonMenu{
+		color:#fff;
+		border:1px solid #fff;
+		padding: 5px;
+	}
+	.danh-muc{
+		color: #fff;
+		margin-left: 15px;
+	}
+
+}

@@ -1,0 +1,352 @@
+/*Header CSS*/
+a{
+	text-decoration: none;
+	color: black;
+}
+img{
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+}
+.TopHeader{
+	background-color: #2C3E50;
+	color: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 12px;
+}
+.TopHeader a{
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+.MidHeader > .container > .row{
+	align-items: center;
+}
+.MidHeader .input-group-text{
+	background: none;
+}
+.MidHeader input.form-control{
+	border-right: none;
+}
+.MidHeader .media{
+	max-width: 250px;
+	margin-left: auto;
+	margin-right: 0;
+}
+.shoppingCart{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color:#E83D2B;
+	text-align: center;
+	line-height: 50px; /* cho <i> nằm giữa chiều dọc*/
+}
+.shoppingCart i{
+	color:#fff;
+	font-size:24px;
+}
+.shoppingPrice{
+	color:#E83D2B;
+}
+.BottomHeader{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+li{
+	list-style: none;
+}
+.DesktopMenu{
+	background-color:rgb(101, 45, 146);
+}
+.menu{
+	list-style: none;
+	margin: 0px; 
+	padding: 0px;
+	text-align: center;	
+}
+.menu > li{
+	display: inline-block;
+	padding: 0px; 
+	margin: 0px;
+	margin-left: -4px; /*cho dung bi khoang trang voi nhau*/
+	/*border-left: 2px solid #fff;*/
+	position: relative;
+}
+.menu > li:last-child{
+	/*border-right: 2px solid #fff;*/
+}
+
+.menu > li > a{
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 13px;
+}
+.menu > li:hover  > a{
+	background-color: rgb(121, 57, 169);
+}
+.home{
+	background-color: rgb(121, 57, 169);
+}
+.menu > li > a:link{
+	color: #fff;
+}
+.sub-menu{
+	list-style: none; 
+	display:none;
+	position: absolute;
+	left: 0px; 
+	right: 0px;
+	top: 38.5px;
+	min-width: 200px;
+	margin: 0; padding: 0;
+	background-color: #fff;
+	z-index: 999;
+}
+.menu > li:hover .sub-menu{
+	display: block;
+}
+.sub-menu > li{
+	margin: 0;
+	padding: 0;
+	border-bottom: 2px solid #fff;
+}
+.sub-menu > li > a{
+	display: block;
+	padding: 10px 15px;
+	text-decoration: none;
+	text-align: left;
+	color:rgb(101, 45, 146);
+	font-size: 13px;
+	font-weight: bold;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.sub-menu > li:hover  > a{
+	background-color: rgb(101, 45, 146);
+	color: #fff;
+}
+/*.has-children:after{
+	font-family: FontAwesome;
+	content: "\f107";
+	color: #fff;
+	position: absolute;
+	top: 10px; 
+	right: 5px;
+}*/
+/*.MobileMenu{
+	display: none;
+}*/
+/**Mobile section*/
+@media (max-width: 767.98px){
+	.MidHeader{
+		padding-top: 20px;
+		padding-bottom: 20px; 
+	}
+	/*nếu hình nhỏ hơn muốn canh giữa*/
+	.MidHeader img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.MidHeader .SearchForm{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.MidHeader .media{
+		max-width: 250px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	/*.DesktopMenu{
+		display: none;
+	}
+	.MobileMenu{
+		display: block;
+	}*/
+	.MobileMenu{
+		background-color: rgb(101, 45, 146);
+		margin: 0; padding: 5px;
+	}
+	.MobileMenu .buttonMenu{
+		color:#fff;
+		border:1px solid #fff;
+		padding: 5px;
+	}
+	.danh-muc{
+		color: #fff;
+		margin-left: 15px;
+	}
+}
+/*Section CSS*/
+.discount-products > h3{
+	background-color: #F8F8F8;
+	color: #2C3E50;
+	border-top: 1px dashed #E8E8E8;
+	border-bottom: 1px dashed #E8E8E8;
+	border-left: 3px solid #773BA5;
+	padding: 5px;
+	margin: 10px;
+}
+.img-discount-products{ 
+	width: 200px; 
+	height: auto; 
+	position: relative;
+}
+.img-discount-products > img {
+	width: 100%; 
+	max-width: 100%; 
+	height: 230px;
+}
+.discount-logo{
+	background-color: red; 
+	color: #fff; 
+	display: inline-block; 
+	position: absolute; 
+	top: 0px; 
+	right: 0px; 
+	width: 40px; 
+	height: 40px; 
+	z-index: 100;
+}
+.discount-logo > span{
+	display: block;
+	padding-top: 5px;
+}
+.info-block{
+	background-color: #F8F8F8;
+	padding: 15px;
+}
+.product-names{
+	color: #2C3E50;
+	font-weight: bold;
+}
+.product-code{
+	color: #773BA5;
+	font-weight: bold;
+}
+.initial-price{
+	color: #8C9798;
+}
+.discount-price{
+	color: #E53D34; 
+	font-size: 20px;
+}
+.right-col > h4{
+	background-color: #F8F8F8;
+	color: #2C3E50;
+	border-top: 1px dashed #E8E8E8;
+	border-bottom: 1px dashed #E8E8E8;
+	border-left: 3px solid #773BA5;
+	padding: 5px;
+}
+hr{
+	border: 1px dotted #CBD0D3;
+}
+.img-seen-products, .info-seen-products{
+	padding: 0;
+	margin: 0;
+	background-color: #F8F8F8;
+}
+.img-seen-products > img{
+	width: 70px; 
+	height: 70px;
+}
+.info-seen-products > h6{
+	color: #2C3E50;
+	font-weight: bold;
+}
+.info-seen-products > p{
+	color: #E53D34; 
+	font-size: 20px;
+	font-weight: bold;
+}
+.img-news, .info-news{
+	padding: 0;
+	margin: 0;
+}
+.img-news > img{
+	width: 90px; 
+	height: 80px;
+}
+.info-news > h6{
+	color: #2C3E50;
+	font-weight: bold;
+}
+.info-news > p{
+	color: gray; 
+}
+
+/*Footer CSS*/
+.TopFooter{
+	border-top: 2px solid rgb(101, 45, 146);
+	border-bottom: 2px solid rgb(101, 45, 146);
+	padding-top: 25px;
+	padding-bottom: 25px;
+	margin-left: 80px;
+	margin-right: 100px;
+}
+.TopFooter .media{
+	max-width: 300px;
+}
+.icons{
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	background-color:rgb(101, 45, 146);
+	text-align: center;
+	line-height: 50px; /* cho <i> nằm giữa chiều dọc*/
+}
+.icons i{
+	color:#fff;
+	font-size:35px;
+	padding: 15px;
+}
+.heading{
+	color:rgb(101, 45, 146);
+}
+.MidFooter{
+	background-color: #F8F8F8;
+	margin-top: 30px;
+	padding-bottom: 30px;
+}
+.MidFooter .system, .company, .information, .contact {
+	padding-top: 10px;
+}
+.heading-MidFooter{
+	color: #2C3E50;
+}
+.divider{
+	border: 2px solid rgb(101, 45, 146);
+	width: 50px;
+	margin-left: 0;
+}
+.MidFooter .system-menu, .company-menu, .information-menu{
+	list-style: none;
+	padding: 0;
+}
+.BottomFooter{
+	padding-top: 10px;
+}
+
+.BottomFooter{
+	background-color: #2C3E50;
+	color:#fff;
+	text-align: center;
+}
+@media (max-width: 767.98px){
+	.TopFooter{ 
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.TopFooter .media{ 
+		padding-top: 20px;
+	}
+	.BottomFooter{
+		text-align: left;
+	}
+}
