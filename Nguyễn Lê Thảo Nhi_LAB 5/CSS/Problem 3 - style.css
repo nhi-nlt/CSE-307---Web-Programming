@@ -80,6 +80,19 @@ hr{
 	font-size: 20px;
 	font-weight: bold;
 }
+.info-seen-products .dis-30-logo > p{
+	background-color: red; 
+	color: #fff; 
+	display: inline-block; 
+	position: absolute; 
+	top: 30px; 
+	right: 20px; 
+	width: 40px; 
+	height: 40px; 
+	z-index: 1; 
+	padding-top: 5px; 
+	font-weight: bold;
+}
 .img-news, .info-news{
 	padding: 0;
 	margin: 0;

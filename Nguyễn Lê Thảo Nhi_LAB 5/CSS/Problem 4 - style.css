@@ -8,6 +8,9 @@ img{
 	width: 100%;
 	height: auto;
 }
+li{
+	list-style: none;
+}
 .TopHeader{
 	background-color: #2C3E50;
 	color: #fff;
@@ -30,7 +33,7 @@ img{
 	border-right: none;
 }
 .MidHeader .media{
-	max-width: 250px;
+	max-width: 170px;
 	margin-left: auto;
 	margin-right: 0;
 }
@@ -54,9 +57,6 @@ img{
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-li{
-	list-style: none;
-}
 .DesktopMenu{
 	background-color:rgb(101, 45, 146);
 }
@@ -71,13 +71,8 @@ li{
 	padding: 0px; 
 	margin: 0px;
 	margin-left: -4px; /*cho dung bi khoang trang voi nhau*/
-	/*border-left: 2px solid #fff;*/
 	position: relative;
 }
-.menu > li:last-child{
-	/*border-right: 2px solid #fff;*/
-}
-
 .menu > li > a{
 	display: inline-block;
 	padding: 10px 20px;
@@ -129,58 +124,6 @@ li{
 .sub-menu > li:hover  > a{
 	background-color: rgb(101, 45, 146);
 	color: #fff;
-}
-/*.has-children:after{
-	font-family: FontAwesome;
-	content: "\f107";
-	color: #fff;
-	position: absolute;
-	top: 10px; 
-	right: 5px;
-}*/
-/*.MobileMenu{
-	display: none;
-}*/
-/**Mobile section*/
-@media (max-width: 767.98px){
-	.MidHeader{
-		padding-top: 20px;
-		padding-bottom: 20px; 
-	}
-	/*nếu hình nhỏ hơn muốn canh giữa*/
-	.MidHeader img{
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.MidHeader .SearchForm{
-		margin-top: 30px;
-		margin-bottom: 30px;
-	}
-	.MidHeader .media{
-		max-width: 250px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	/*.DesktopMenu{
-		display: none;
-	}
-	.MobileMenu{
-		display: block;
-	}*/
-	.MobileMenu{
-		background-color: rgb(101, 45, 146);
-		margin: 0; padding: 5px;
-	}
-	.MobileMenu .buttonMenu{
-		color:#fff;
-		border:1px solid #fff;
-		padding: 5px;
-	}
-	.danh-muc{
-		color: #fff;
-		margin-left: 15px;
-	}
 }
 /*Section CSS*/
 .discount-products > h3{
@@ -265,6 +208,19 @@ hr{
 	font-size: 20px;
 	font-weight: bold;
 }
+.info-seen-products .dis-30-logo > p{
+	background-color: red; 
+	color: #fff; 
+	display: inline-block; 
+	position: absolute; 
+	top: 30px; 
+	right: 20px; 
+	width: 40px; 
+	height: 40px; 
+	z-index: 1; 
+	padding-top: 5px; 
+	font-weight: bold;
+}
 .img-news, .info-news{
 	padding: 0;
 	margin: 0;
@@ -332,13 +288,51 @@ hr{
 .BottomFooter{
 	padding-top: 10px;
 }
-
 .BottomFooter{
 	background-color: #2C3E50;
 	color:#fff;
 	text-align: center;
 }
+/*Mobile section*/
 @media (max-width: 767.98px){
+	.MidHeader{
+		padding-top: 20px;
+		padding-bottom: 20px; 
+	}
+	/*nếu hình nhỏ hơn muốn canh giữa*/
+	.MidHeader img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.MidHeader .SearchForm{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.MidHeader .media{
+		max-width: 250px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	/*.DesktopMenu{
+		display: none;
+	}
+	.MobileMenu{
+		display: block;
+	}*/
+	.MobileMenu{
+		background-color: rgb(101, 45, 146);
+		margin: 0; padding: 5px;
+	}
+	.MobileMenu .buttonMenu{
+		color:#fff;
+		border:1px solid #fff;
+		padding: 5px;
+	}
+	.danh-muc{
+		color: #fff;
+		margin-left: 15px;
+	}
 	.TopFooter{ 
 		margin-left: 0;
 		margin-right: 0;
