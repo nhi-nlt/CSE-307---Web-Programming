@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Selection Sort</title>
+</head>
+<body>
+	<h1>Problem 9. Selection sort</h1>
+	<script type="text/javascript">
+		function selectionSort(array) { 
+		    for(let i = 0; i < array.length; i++) {
+		        // Finding the smallest number in the subarray
+		        let min = i;
+		        for(let j = i+1; j < array.length; j++){
+		            if(array[j] < array[min]) {
+		                min=j; 
+		           	}
+		        }
+		        if (min != i) {
+		            // Swap
+		            let temp = array[i]; 
+		            array[i] = array[min];
+		            array[min] = temp;      
+		        }
+		    }
+		    return array;
+		}
+		function printArray(arr){
+		    for (let i = 0; i < arr.length; i++){
+		        document.write(arr[i] + " ");
+		    }
+		    document.write(" <br>");
+		}
+
+		function printConsoleLog(arr){
+			let s ="";
+	        for(let i = 0; i < arr.length; i++){
+                s += arr[i]+ " ";
+	        }
+            console.log(s);
+		}
+		let num = [12, 3, 56, 19, 323, 87, 31, 59, 389];
+		selectionSort(num);
+    	document.write("Sorted array: <br>");
+    	printArray(num);
+    	console.log("Sorted array: ");
+    	printConsoleLog(num);
+	</script>
+</body>
+</html>

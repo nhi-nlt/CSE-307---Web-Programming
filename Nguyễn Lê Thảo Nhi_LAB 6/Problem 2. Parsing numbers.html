@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Parsing Numbers</title>
+</head>
+<body>
+	<p>Problem 2: Parsing Numbers</p>
+
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th scope="col">str</th>
+				<th scope="col">parseInt(str)</th>
+				<th scope="col">parseFloat(str)</th>
+				<th scope="col">Number(str)</th>
+				<th scope="col">+str</th>
+				<th scope="col">str | 0</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td id="C10">1234</td>
+				<td id="C11"></td>
+				<td id="C12"></td>
+				<td id="C13"></td>
+				<td id="C14"></td>
+				<td id="C15"></td>
+			</tr>
+			<tr>
+				<td id="C20">1238abc</td>
+				<td id="C21"></td>
+				<td id="C22"></td>
+				<td id="C23"></td>
+				<td id="C24"></td>
+				<td id="C25"></td>
+			</tr>
+			<tr>
+				<td id="C30">0.15</td>
+				<td id="C31"></td>
+				<td id="C32"></td>
+				<td id="C33"></td>
+				<td id="C34"></td>
+				<td id="C35"></td>
+			</tr>
+			<tr>
+				<td id="C40">3.14ivan</td>
+				<td id="C41"></td>
+				<td id="C42"></td>
+				<td id="C43"></td>
+				<td id="C44"></td>
+				<td id="C45"></td>
+			</tr>
+			<tr>
+				<td id="C50">Infinity</td>
+				<td id="C51"></td>
+				<td id="C52"></td>
+				<td id="C53"></td>
+				<td id="C54"></td>
+				<td id="C55"></td>
+			</tr>
+			<tr>
+				<td id="C60">99999999999999999999</td>
+				<td id="C61"></td>
+				<td id="C62"></td>
+				<td id="C63"></td>
+				<td id="C64"></td>
+				<td id="C65"></td>
+			</tr>
+		</tbody>
+	</table>
+	<script type="text/javascript">
+		let c10=document.querySelector("#C10").innerText;
+		document.querySelector("#C11").innerHTML = parseInt(c10);
+		document.querySelector("#C12").innerHTML = parseFloat(c10);
+		document.querySelector("#C13").innerHTML = Number(c10);
+		document.querySelector("#C14").innerHTML = c10+c10;
+		document.querySelector("#C15").innerHTML = c10|0;
+		let c20=document.querySelector("#C20").innerText;
+		document.querySelector("#C21").innerHTML = parseInt(c20);
+		document.querySelector("#C22").innerHTML = parseFloat(c20);
+		document.querySelector("#C23").innerHTML = Number(c20);
+		document.querySelector("#C24").innerHTML = c20+c20;
+		document.querySelector("#C25").innerHTML = c20|0;
+		let c30=document.querySelector("#C30").innerText;
+		document.querySelector("#C31").innerHTML = parseInt(c30);
+		document.querySelector("#C32").innerHTML = parseFloat(c30);
+		document.querySelector("#C33").innerHTML = Number(c30);
+		document.querySelector("#C34").innerHTML = c30+c30;
+		document.querySelector("#C35").innerHTML = c30|0;
+		let c40=document.querySelector("#C40").innerText;
+		document.querySelector("#C41").innerHTML = parseInt(c40);
+		document.querySelector("#C42").innerHTML = parseFloat(c40);
+		document.querySelector("#C43").innerHTML = Number(c40);
+		document.querySelector("#C44").innerHTML = c40+c40;
+		document.querySelector("#C45").innerHTML = c40|0;
+		let c50=document.querySelector("#C50").innerText;
+		document.querySelector("#C51").innerHTML = parseInt(c50);
+		document.querySelector("#C52").innerHTML = parseFloat(c50);
+		document.querySelector("#C53").innerHTML = Number(c50);
+		document.querySelector("#C54").innerHTML = c50+c50;
+		document.querySelector("#C55").innerHTML = c50|0;
+		let c60=document.querySelector("#C60").innerText;
+		document.querySelector("#C61").innerHTML = parseInt(c60);
+		document.querySelector("#C62").innerHTML = parseFloat(c60);
+		document.querySelector("#C63").innerHTML = Number(c60);
+		document.querySelector("#C64").innerHTML = c60+c60;
+		document.querySelector("#C65").innerHTML = c60|0;
+	</script>
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

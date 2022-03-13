@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Replace all href values</title>
+</head>
+<body>
+	<h1>Problem 3. Replace all href values</h1>
+	<ul type="none">
+        <li><a class="link" href="https://www.youtube.com/">YouTube</a></li>
+        <li><a class="link" href="https://vnexpress.net/">VnExpress</a></li>
+        <li><a class="link" href="https://www.netflix.com/vn/">Netflix</a></li>
+    </ul>
+    <button id="replacedBtn">Replaced by Google link</button>
+    <script>
+    	function replacedFunction(){
+	    	let queryLink = document.querySelectorAll(".link");
+	        for(var i=0; i<queryLink.length; i++){
+	        	queryLink[i].href = "https://www.google.com/";
+	        	queryLink[i].style.color = "red";
+	        }
+	    }
+		let button = document.querySelector("#replacedBtn");
+		button.addEventListener("click", replacedFunction, false);
+		
+    	//cach 2
+        // function replacedFunction(){
+        //     let NodeObject = document.querySelectorAll(".link");
+        //     NodeObject.forEach(function(item){
+        //         item.href = "https://www.google.com/";
+        //     });
+        // } 
+    </script>
+</body>
+</html>

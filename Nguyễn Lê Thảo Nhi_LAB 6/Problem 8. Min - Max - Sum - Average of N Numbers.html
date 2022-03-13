@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Problem 8. MMSA (Min, Max, Sum, Average) of N Numbers</title>
+</head>
+<body>
+	<h1>Problem 8. MMSA (Min, Max, Sum, Average) of N Numbers</h1>
+	<script type="text/javascript">
+		// let num = [12.1, 3.5, 56.35, 19.2, 323.7, 87.9, 31.21, 59.34, 389.5];
+		let num = [2, 3, 4, 5];
+		function findMin(arr){
+			let min = arr[0];
+			for (var i = 0; i < arr.length; i++) {
+				if(arr[i] < min){
+					min = arr[i];
+				}
+			}
+			console.log('Min = ' + parseFloat(min).toFixed(2));
+		}
+
+		function findMax(arr){
+			let max = arr[0];
+			for (var i = 0; i < arr.length; i++) {
+				if(arr[i] > max){
+					max = arr[i];
+				}
+			}
+			console.log('Max = ' + parseFloat(max).toFixed(2));
+		}
+		
+		function calculateSum(arr){
+			let sum = 0;
+			for (var i = 0; i < arr.length; i++) {
+				sum += arr[i];
+			}
+			console.log('Sum = ' + parseFloat(sum).toFixed(2));
+		}
+
+		function calculateAverage(arr){
+			let avg = 0;
+			let sum = 0;
+			for (var i = 0; i < arr.length; i++) {
+				sum += arr[i];
+			}
+			avg  = sum/arr.length;
+			console.log('Avg = ' + parseFloat(avg).toFixed(2));
+		}
+		findMin(num);
+		findMax(num);
+		calculateSum(num);
+		calculateAverage(num);
+	</script>
+</body>
+</html>
