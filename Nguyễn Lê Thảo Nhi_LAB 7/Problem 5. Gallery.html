@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font awesome -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<title>Problem 5. Gallery</title>
+	<style type="text/css">
+		img{
+			max-width: 100%;
+			height: auto;
+			width: 100%;
+		}
+		.BigImageGroup{
+			position: relative;
+		}
+		.BigImageGroup span {
+			position: absolute;
+			top: 10px;
+			right: 20px;
+			color: #fff;
+			font-size: 40px;
+			display: inline-block;
+			cursor: pointer;
+		}
+		​#imgtext {
+			position: absolute;
+			bottom: 15px;
+			left: 15px;
+			color: white;
+			font-size: 20px;
+			z-index: 999;
+			color:#ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row SmallImage">
+			<div class="col-md-3 col-lg-3">
+				<img src="https://www.w3schools.com/howto/img_nature.jpg" alt="Nature">
+			</div>
+			<div class="col-md-3 col-lg-3">
+				<img src="https://www.w3schools.com/howto/img_snow.jpg" alt="Snow">
+			</div>
+			<div class="col-md-3 col-lg-3">
+				<img src="https://www.w3schools.com/howto/img_mountains.jpg" alt="Mountains">
+			</div>
+			<div class="col-md-3 col-lg-3">
+				<img src="https://www.w3schools.com/howto/img_lights.jpg" alt="Lights">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="BigImageGroup mt-4">
+					<img id="BigImage" src="https://www.w3schools.com/howto/img_lights.jpg" alt="Lights">
+					<span>&times;</span>
+					<div id="imgtext"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		let smallImages = document.querySelector(".SmallImage");
+		smallImages.addEventListener("click", function(event) {
+			if(event.target.tagName === "IMG"){
+				let src = event.target.src;
+				document.querySelector("#BigImage").src = src;
+				document.querySelector(".BigImageGroup").style.display = "block";
+				document.getElementById("imgtext").innerHTML = document.querySelector(".SmallImage").alt;
+			}
+		});
+
+		let close = document.querySelector(".BigImageGroup span");
+		close.addEventListener("click",function() {
+			document.querySelector(".BigImageGroup").style.display = "none";
+		});
+	</script>
+</body>
+</html>

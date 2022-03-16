@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/fontawesome.min.css">
+	<title>Overlay</title>
+	<style>
+		body {
+			font-family: Arial;
+	   }
+	   * {
+			box-sizing: border-box;
+	   }
+	   .showBtn {
+			background: #008b0c;
+			border: none;
+			color:white;
+			padding: 10px 15px;
+			font-size: 20px;
+			cursor: pointer;
+			opacity: 0.8;
+	   }
+	   .showBtn:hover {
+			opacity: 1;
+	   }
+		.overlay {
+			height: 100%;
+			width: 100%;
+			display: none;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			background-color: rgba(0, 0, 0, 0.747);
+			justify-content: center;
+	   	}
+	   	.overlay .closeBtn > #text{
+	   		text-align: left;
+	   		padding: 20px;
+   		    background-color: #fff;
+   		    color: #000;
+		    max-width: 300px;
+		    height: 300px;
+		    border-radius: 5px;
+		    display: block;
+		    margin-left: auto;
+		    margin-right: auto;
+		    margin-top: 10%;
+	   	}
+	   	.overlay .closeBtn > #text > h3{
+	   		text-align: center;
+	   	}
+	   	.overlay .closeBtn > #text > #div1, #div2{
+	   		border-radius: 5px;
+	   		border: 1px solid #ccc;
+	   		margin: 5%;
+	   	}
+	   	.overlay .hideBtn {
+			position: absolute;
+			top: 20px;
+			right: 45px;
+			font-size: 60px;
+			cursor: pointer;
+			color: rgb(255, 0, 0);
+			opacity: 0.8;
+	   	}
+	   	.overlay .hideBtn:hover {
+			opacity: 1;
+	   	}
+	   	.overlay input[type=text] {
+			padding: 15px;
+			font-size: 17px;
+			border: none;
+			float: left;
+			width: 50%;
+			background: white;
+	   	}
+	   	.overlay input[type=text]:hover {
+			background: #f1f1f1;
+	   	}
+	   	.overlay button {
+			float: left;
+			padding: 15px;
+			background: #ccc;
+			font-size: 17px;
+			border: 1px solid #000;
+			color:#000;
+			cursor: pointer;
+			opacity: 0.8;
+			border-radius: 5px;
+			margin-right: 5px;
+		}
+		.overlay button:hover {
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="overlay" >
+		<!-- <span class="hideBtn">×</span> -->
+		<div class="closeBtn">
+			<div id="text">
+				<h3>Fade & scale example</h3>
+				<div id="div1">$('#fadeandscale').popup({<br>transition: 'all 0.3s'<br>});</div>
+				<div id="div2">$('#fadeandscale').popup({<br>transition: 'all 0.3s'<br>});</div>
+				<form>
+					<button type="">Next example</button>
+					<button type="submit">Close</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<h1>Problem 6. Overlay</h1>
+	<button class="showBtn">Turn Overlay On</button>
+
+	<script>
+	   	document.querySelector('.overlay').addEventListener('click',hideSearch);
+	   	document.querySelector('.showBtn').addEventListener('click',showSearch);
+	   	
+	   	function showSearch() {
+	      	document.querySelector('.overlay').style.display = "block";
+	   	}
+	   	function hideSearch() {
+	      	document.querySelector('.overlay').style.display = "none";
+	   	}
+	</script>
+</body>
+</html>

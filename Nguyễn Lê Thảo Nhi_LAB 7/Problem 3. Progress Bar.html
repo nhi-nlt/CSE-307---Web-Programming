@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Problem 3. Progress Bar</title>
+	<style type="text/css">
+		#Gray {
+			background-color: #ccc;
+			height: 40px;
+			position: relative;
+			margin-bottom: 40px;
+		}
+		#Green{
+			background-color: green;
+			position: absolute;
+			height: 40px;
+			color: #fff;
+			text-align: center;
+			width: 0%;
+			line-height: 40px;
+			top: 0;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="Gray">
+		<div id="Green">
+			0%
+		</div>
+	</div>
+	<button id="ClickMe">Click Me</button>
+
+	<script type="text/javascript">
+		let element;
+		let timer, percent = 0;
+		let button = document.querySelector("#ClickMe");
+		button.addEventListener("click", function() {
+			element = document.querySelector("#Green");
+			timer = setInterval(Loop, 100);
+		}, false);
+		function Loop(){
+			if(percent == 100){
+				clearInterval(timer);
+			}else {
+				percent++;
+				element.style.width = percent + "%";
+				element.innerHTML = percent + "%";
+			}
+		}
+	</script>
+</body>
+</html>
