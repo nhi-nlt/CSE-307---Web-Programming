@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<title>Problem 7. Student Management System</title>
+	<style type="text/css">
+		#classGroup .item, .Edit, .Del{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-3 ">
+				<h2>Class List</h2>
+				<ul id="classGroup">
+					<li class="item">Lớp 1</li>
+					<li class="item">Lớp 2</li>
+				</ul>
+				<div id="SearchForm">
+					<input type="text" class="form-control" id="Search" placeholder="Search">
+					<button type="button" class="btn btn-primary" id="SearchBtn">Search</button>
+				</div>
+			</div>
+			<div class="col-lg-9">
+				<h3>Edit student's information</h3>
+				<form>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-2">
+								<input type="text" class="form-control" id="ID" placeholder="ID">
+							</div>
+							<div class="col-md-3">
+								<input type="text" class="form-control" id="Name" placeholder="Name">
+							</div>
+							<div class="col-md-3">
+								<input type="text" class="form-control" id="Email" placeholder="Email">
+							</div>
+							<div class="col-md-2">
+								<select class="form-control" id="Class">
+									<option>Lớp 1</option>
+									<option>Lớp 2</option>
+								</select>
+							</div>
+							<div class="col-md-2">
+								<!-- type="submit" -> reload page, so type = "button" -->
+								<button type="button" class="btn btn-primary" id="Submit" data-function="Add">Submit</button>
+							</div>
+						</div>
+					</div>
+				</form>
+
+				<h3>Student List</h3>
+				<table id="List" class="table table-borderless">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Full Name</th>
+							<th scope="col">Student ID</th>
+							<th scope="col">Function</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">1</th>
+							<td>Nguyễn Văn A</td>
+							<td>2230</td>
+							<td>
+								<span class="Edit mr-3">Edit</span>
+								<span class="Del">Del</span>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>Đoàn Văn B</td>
+							<td>2227</td>
+							<td>
+								<span class="Edit mr-3">Edit</span>
+								<span class="Del">Del</span>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td>Đỗ Thị C</td>
+							<td>2219</td>
+							<td>
+								<span class="Edit mr-3">Edit</span>
+								<span class="Del">Del</span>
+							</td>
+						</tr>
+	  				</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			let studentList, classList;
+			$.get(
+				"http://45.76.156.126/getdata.php",
+				{
+					Type : "Student",
+					// Brand: ""
+				},
+				function(data){
+					studentList = data;
+					console.log(data);
+					studentList.sort(sortByName);
+					showStudentList(studentList);
+				}, "json"
+			);
+
+			$.get(
+				"http://45.76.156.126/getdata.php",
+				{
+					Type : "Class"
+					// Brand: ""
+				},
+				function(data){
+					classList = data;
+					//1. Get Class List Data
+					console.log(data);
+
+					//2. Append Class List Section
+					showClassList(classList);
+
+					//3. Append Class List Selectbox
+					addClassListSelectBox(classList);
+					
+				}, "json" //ko có json sẽ hiểu là chuỗi
+			);
+
+			function showStudentList(stuList){
+				let str ="";
+				for(let i=0; i < stuList.length; i++){
+					str += `<tr><th scope="row">${i+1}</th><td>${stuList[i].Name}</td><td>${stuList[i].ID}<td>
+							<span class="Edit mr-3" data-ID="${stuList[i].ID}">Edit</span>
+							<span class="Del" data-ID="${stuList[i].ID}">Del</span>
+						</td></tr>`
+				}
+				$("tbody").html("");
+				$("tbody").append(str);
+			}
+
+			function showClassList(classList){
+				let str ="";
+				for(let i=0; i < classList.length; i++){
+					str += `<li class="item">${classList[i]}</li>`
+				}
+				$("#classGroup").html("");
+				$("#classGroup").append(str);
+			}
+
+			function addClassListSelectBox(classList){
+				let str = "";
+				for(let i=0; i < classList.length; i++){
+					str += `<option value="${classList[i]}">${classList[i]}</option>`;
+				}
+				$("#Class").html("");
+				$("#Class").append(str); 
+			}
+			//Sort the product list by name
+	        function sortByName(student1, student2){
+	            let ob1 = student1.Name;
+	            let ob2 = student2.Name;
+	            if (ob1 > ob2) {return 1;}
+	            if (ob1 < ob2) {return -1;}
+	            return 0;
+	        }
+
+	        //Add a new student
+	        $("#Submit").click(function(){
+	        	let _ID = $("#ID").val();
+	        	let _Name = $("#Name").val();
+	        	let _Email = $("#Email").val();
+	        	let _Class = $("#Class").val();
+
+	        	let _function = $("#Submit").attr("data-function");
+	        	if(_function == "Add"){
+	        		studentList.push(
+		        		{
+		        			"ID" : _ID,
+		        			"Name" : _Name,
+		        			"Email" : _Email,
+		        			"Class" : _Class
+		        		}
+		        	);
+	        	} else{
+	        		for(let i=0; i < studentList.length; i++){
+	        			if(studentList[i].ID == _ID){
+	        				studentList[i].Name = _Name; 
+	        				studentList[i].Email = _Email; 
+	        				studentList[i].Class = _Class; 
+	        				break;
+	        			}
+	        		}
+	        		$("#Submit").attr("data-function", "Add");
+	        	}
+	        	//Thêm xóa thành công set về rỗng hết
+		        $("#ID").val("");
+		        $("#Name").val("");
+		        $("#Email").val("");
+		        $("#Class").val("");
+	        	showStudentList(studentList);
+	        });
+	        
+
+	        //Show Student List by Class List
+	        $("#classGroup").on("click", ".item", function(){
+	        	// thẻ nằm giữ 2 <li>
+	        	//1. form: dùng hàm.val()
+	        	//2. lấy text: xài - innerText (JS thuần)  -.html() (của jQuery)
+	        	let _value = $(this).html();
+	        	let str ="";
+	        	let orderedNum =1;
+				for(let i=0; i < studentList.length; i++){
+					if (studentList[i].Class == _value) {
+						str += `<tr><th scope="row">${orderedNum++}</th><td>${studentList[i].Name}</td><td>${studentList[i].ID}<td>
+								<span class="Edit mr-3" data-ID="${studentList[i].ID}">Edit</span>
+								<span class="Del" data-ID="${studentList[i].ID}">Del</span>
+							</td></tr>`
+					}
+				}
+				$("tbody").html("");
+				$("tbody").append(str);
+	        })
+
+	        //Delete 
+	        $("tbody").on("click", ".Del", function(){
+	        	let _confirm = confirm("Do yo want to delete?");
+	        	if(_confirm){
+	        		let _ID = $(this).attr("data-ID");
+	        		for(let i=0; i < studentList.length; i++){
+	        			if(studentList[i].ID == _ID){
+	        				studentList.splice(i, 1); //delete 1
+	        				break;
+	        			}
+	        		}
+	        		showStudentList(studentList);
+	        	}
+	        });
+
+	        //Edit
+	        $("tbody").on("click", ".Edit", function(){
+	        	let _ID = $(this).attr("data-ID");
+        		for(let i=0; i < studentList.length; i++){
+        			if(studentList[i].ID == _ID){
+        				$("#ID").val(studentList[i].ID);
+        				$("#Name").val(studentList[i].Name);
+        				$("#Email").val(studentList[i].Email);
+        				$("#Class").val(studentList[i].Class);
+        				$("#Submit").attr("data-function", "Edit");
+        				break;
+        			}
+        		}
+
+	        });	
+	        //Search a product by Name
+	        $("#SearchForm").on("click", "#SearchBtn", function(){
+	        	let string = "";
+	        	let orderNumber = 1;
+	        	let _searchValue = $("#Search").val();
+	        	
+	            for(let i=0; i < studentList.length; i++){
+
+	                if (studentList[i].Name.indexOf(_searchValue) !== -1) {
+	                    string += `<tr><th scope="row">${orderNumber++}</th><td>${studentList[i].Name}</td><td>${studentList[i].ID}<td>
+								<span class="Edit mr-3" data-ID="${studentList[i].ID}">Edit</span>
+								<span class="Del" data-ID="${studentList[i].ID}">Del</span>
+							</td></tr>`
+	                }
+	            }
+	            $("tbody").html("");
+				$("tbody").append(string);
+	        });
+		});
+	</script>
+</body>
+</html>
